@@ -1,0 +1,15 @@
+dist: trusty
+sudo: required
+
+addons:
+  sonarcloud:
+    organization: "maximilian"
+    token:
+      secure: "8479a0733ccffa919fe8c11075cc85644837cabb"
+jdk:
+  - oraclejdk8
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
